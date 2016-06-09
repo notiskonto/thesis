@@ -1,6 +1,5 @@
 #!/usr/lib/python
-#this is test to try git
-#this is test 2
+
 from __future__ import division
 import math
 import plotly
