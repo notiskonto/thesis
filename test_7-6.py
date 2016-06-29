@@ -9,23 +9,23 @@ from plotly.graph_objs import *
 plotly.tools.set_credentials_file(username='notiskon', api_key='tb196pluzj')
 # declare the saving in percentage for different combination of patterns during weekdays
 #this allocation is based in 50/50 wavelength resource sharing. However it can be another scenario with unequal sharing
-table_transport_weekdays = [95,0,50,20,50,50]
-table_resident_weekdays = [80,50,35,10,0,0]
-table_office_weekdays = [95,50,0,25,25,55]
+table_transport_weekdays = [5,100,50,80,50,40]
+table_resident_weekdays = [20,50,65,90,100,100]
+table_office_weekdays = [5,50,100,75,75,45]
 
-table_transport_weekend = [100,50,50,60,60,70]
-table_resident_weekend = [75,50,25,25,15,0]
-table_office_weekend = [95,75,50,60,60,65]
+table_transport_weekend = [0,50,50,40,40,30]
+table_resident_weekend = [25,50,75,75,85,100]
+table_office_weekend = [5,25,50,40,40,35]
 
-table_transport_office_weekdays = [90,25,25,25,50,60]
-table_transport_resident_weekdays = [75,25,40,10,25,50]
-table_office_resident_weekdays = [75,12,25,25,25,50]
-table_office_resident_transport_weekdays = [75,33,20,20,35,40]
+table_transport_office_weekdays = [10,75,75,75,50,40]
+table_transport_resident_weekdays = [25,75,60,90,75,50]
+table_office_resident_weekdays = [25,88,75,75,75,50]
+table_office_resident_transport_weekdays = [25,67,80,80,65,60]
 
-table_transport_office_weekend = [50,50,50,50,50,60]
-table_transport_resident_weekend = [50,30,30,30,30,30]
-table_office_resident_weekend = [50,30,30,30,30,30]
-table_office_resident_transport_weekend = [80,40,40,40,40,40]
+table_transport_office_weekend = [50,50,50,50,50,40]
+table_transport_resident_weekend = [50,70,70,70,70,70]
+table_office_resident_weekend = [50,70,70,70,70,70]
+table_office_resident_transport_weekend = [20,60,60,60,60,60]
 
 #select combination of traffic area
 
