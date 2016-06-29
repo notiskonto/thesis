@@ -308,8 +308,8 @@ if True:
 			for x in range(0, len(table_save_sc_2share)):
 				sum_save_sc.append(int(table_save_sc_3share[x] + table_save_sc_2share[x]))
 				sum_save_sc_weekend.append(int(table_save_sc_3share_weekend[x] + table_save_sc_2share_weekend[x]))
-			print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-			print  "\nAt different times we save the following small cells during weekends:\n" + str(sum_save_sc_weekend)
+			print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+			print  "\nAt different times we use the following small cells during weekends:\n" + str(sum_save_sc_weekend)
 
 		else:
 			#print " test between 2 areas"
@@ -369,8 +369,8 @@ if True:
 						#print table_weekday
 						sum_save_sc.append(int(((min_sc*2) * (table_weekday[x]/100))))
 						sum_save_sc_weekend.append(int(((min_sc*2) * (table_weekend[x]/100))))
-					print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-					print  "\nAt different times we save the following small cells during weekends:\n" + str(sum_save_sc_weekend)
+					print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+					print  "\nAt different times we use the following small cells during weekends:\n" + str(sum_save_sc_weekend)
 				elif (max_remain_sc % wavelength) == 0:
 					#print "HERE"
 					print "\n\tIn total we need:"
@@ -379,8 +379,8 @@ if True:
 						#print table_weekday
 						sum_save_sc.append(int(((min_sc + max_sc) * (table_weekday[x]/100))))
 						sum_save_sc_weekend.append(int(((min_sc + max_sc) * (table_weekend[x]/100))))
-					print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-					print  "\nAt different times we save the following small cells during weekends:\n" + str(sum_save_sc_weekend)
+					print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+					print  "\nAt different times we use the following small cells during weekends:\n" + str(sum_save_sc_weekend)
 				else:
 					print "find what was WRONG"
 					#print " we need " + str(max_remain_wss) + " to used only by " + max_area + " and will not be shared."
@@ -418,8 +418,8 @@ if True:
 								table_save_sc_2share_eq_sh_weekend.append(int(((min_sc_mod*2) * (table_weekend[x]/100))))
 								table_save_sc_2share_weekend.append(int((((min_wss*(wavelength/shared))*2) * (table_weekend[x]/100))))
 								sum_save_sc_weekend.append(int(table_save_sc_2share_weekend[x] + table_save_sc_2share_eq_sh_weekend[x]))
-							print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-							print  "\nAt different times we save the following small cells during weekends:\n" + str(sum_save_sc_weekend)
+							print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+							print  "\nAt different times we use the following small cells during weekends:\n" + str(sum_save_sc_weekend)
 						else:
 							#print "HERE"
 							table_save_sc_2share_uneq_sh = []
@@ -438,8 +438,8 @@ if True:
 								table_save_sc_2share_weekend.append(int((((min_wss*(wavelength/shared))*2) * (table_weekend[x]/100))))
 								#print table_save_sc_2share_weekend[x]
 								sum_save_sc_weekend.append(int(table_save_sc_2share_weekend[x] + table_save_sc_2share_uneq_sh_weekend[x]))
-							print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-							print  "\nAt different times we save the following small cells during weekends:\n" + str(sum_save_sc_weekend)
+							print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+							print  "\nAt different times we use the following small cells during weekends:\n" + str(sum_save_sc_weekend)
 				elif (max_remain_sc % wavelength) != 0 and (min_sc_mod+(max_remain_sc % wavelength)) > wavelength:
 					#distribution of wavelengths
 					min_shared_percentage = (min_sc_mod*100)/wavelength
@@ -462,8 +462,8 @@ if True:
 						table_save_sc_2share_uneq_sh_weekend.append(int(((min_sc_mod*2) * (table_weekend[x]/100))))
 						table_save_sc_2share_weekend.append(int((((min_wss*(wavelength/shared))*2) * (table_weekend[x]/100))))
 						sum_save_sc_weekend.append(int(table_save_sc_2share_weekend[x] + table_save_sc_2share_uneq_sh_weekend[x]))
-					print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-					print  "\nAt different times we save the following small cells during weekend:\n" + str(sum_save_sc_weekend)
+					print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+					print  "\nAt different times we use the following small cells during weekend:\n" + str(sum_save_sc_weekend)
 				elif (max_remain_sc % wavelength) == 0:
 					print "\none device has unequal sharing of resources."
 					saved_wv = wavelength - min_sc_mod
@@ -482,12 +482,12 @@ if True:
 						table_save_sc_2share_uneq_sh_weekend.append(int(((min_sc_mod*2) * (table_weekend[x]/100))))
 						table_save_sc_2share_weekend.append(int((((min_wss*(wavelength/shared))*2) * (table_weekend[x]/100))))
 						sum_save_sc_weekend.append(int(table_save_sc_2share_weekend[x] + table_save_sc_2share_uneq_sh_weekend[x]))
-					print  "\nAt different times we save the following small cells:\n" + str(sum_save_sc)
-					print  "\nAt different times we save the following small cells during weekend:\n" + str(sum_save_sc_weekend)
+					print  "\nAt different times we use the following small cells:\n" + str(sum_save_sc)
+					print  "\nAt different times we use the following small cells during weekend:\n" + str(sum_save_sc_weekend)
 				else:
 					print"/n HEY DUDE....YOU ARE STUPID!!!"
 
-			print "test print"
+			#print "test print"
 	#if 3 values are equal:
 	else:
 		print "\nIn total we need " + str(list_of_wss[0]) + " device to be shared between the three areas."
@@ -501,34 +501,34 @@ if True:
 			#print "(n_sc_office+n_sc_transport+n_sc_resident) = " + str ((n_sc_office+n_sc_transport+n_sc_resident))
 			table_save_sc_3share.append(int(((list_of_wss[0]*wavelength) * (table_weekday[x]/100))))
 			table_save_sc_3share_weekend.append(int(((list_of_wss[0]*wavelength) * (table_weekend[x]/100))))
-		print  "\nAt different times we save the following small cells:\n" + str(table_save_sc_3share)
-		print  "\nAt different times we save the following small cells during weekends:\n" + str(table_save_sc_3share_weekend)
-	print " If we did't share any resources:"
+		print  "\nAt different times we use the following small cells:\n" + str(table_save_sc_3share)
+		print  "\nAt different times we use the following small cells during weekends:\n" + str(table_save_sc_3share_weekend)
+	print "\n If we did't share any resources:"
 	table_save_not_share_weekday = []
 	table_save_not_share_weekend = []
 	if pattern_combo == 4:
 		for x in range(0, 6):
 			table_save_not_share_weekday.append(int(((n_sc_transport) * (table_transport_weekdays[x]/100))+(n_sc_resident * (table_resident_weekdays[x]/100))+(n_sc_office * (table_office_weekdays[x]/100))))
 			table_save_not_share_weekend.append(int(((n_sc_transport) * (table_transport_weekend[x]/100))+(n_sc_resident * (table_resident_weekend[x]/100))+(n_sc_office * (table_office_weekend[x]/100))))
-		print "\nDuring weekdays we could save in total:"
+		print "During weekdays we use in total:"
 		print table_save_not_share_weekday
-		print "\n and during weekends"
+		print "and during weekends"
 		print table_save_not_share_weekend
 	elif pattern_combo == 1:
 		for x in range(0, 6):
 			table_save_not_share_weekday.append(int(((n_sc_transport) * (table_transport_weekdays[x]/100))+(n_sc_office * (table_office_weekdays[x]/100))))
 			table_save_not_share_weekend.append(int(((n_sc_transport) * (table_transport_weekend[x]/100))+(n_sc_office * (table_office_weekend[x]/100))))
-		print "\nDuring weekdays we could save in total:"
+		print "During weekdays we use in total:"
 		print table_save_not_share_weekday
-		print "\n and during weekends"
+		print "and during weekends"
 		print table_save_not_share_weekend
 	if pattern_combo == 2:
 		for x in range(0, 6):
 			table_save_not_share_weekday.append(int(((n_sc_transport) * (table_transport_weekdays[x]/100))+(n_sc_resident * (table_resident_weekdays[x]/100))))
 			table_save_not_share_weekend.append(int(((n_sc_transport) * (table_transport_weekend[x]/100))+(n_sc_resident * (table_resident_weekend[x]/100))))
-		print "\nDuring weekdays we could save in total:"
+		print "During weekdays we use in total:"
 		print table_save_not_share_weekday
-		print "\n and during weekends"
+		print "and during weekends"
 		print table_save_not_share_weekend
 	if pattern_combo == 3:
 		#print "HERE"
@@ -536,17 +536,17 @@ if True:
 			#print x
 			table_save_not_share_weekday.append(int((n_sc_resident * (table_resident_weekdays[x]/100))+(n_sc_office * (table_office_weekdays[x]/100))))
 			table_save_not_share_weekend.append(int((n_sc_resident * (table_resident_weekend[x]/100))+(n_sc_office * (table_office_weekend[x]/100))))
-		print "\nDuring weekdays we could save in total:"
+		print "During weekdays we use in total:"
 		print table_save_not_share_weekday
-		print "\n and during weekends"
+		print "and during weekends"
 		print table_save_not_share_weekend
 
 	#x=['04:00', '08:00', '16:00', '18:00', '20:00', '21:00'],
     #y=sum_save_sc)
     # Add data
 	time = ['04:00', '08:00', '16:00', '18:00', '20:00', '21:00']
-	print sum_save_sc
-	print sum_save_sc_weekend
+	print "\n"
+	#print sum_save_sc_weekend
 
 
 	# Create and style traces
