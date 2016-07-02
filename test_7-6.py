@@ -22,9 +22,9 @@ table_transport_resident_weekdays = [25,75,60,90,75,50]
 table_office_resident_weekdays = [25,88,75,75,75,50]
 table_office_resident_transport_weekdays = [25,67,80,80,65,60]
 
-table_transport_office_weekend = [50,50,50,50,50,40]
-table_transport_resident_weekend = [50,70,70,70,70,70]
-table_office_resident_weekend = [50,70,70,70,70,70]
+table_transport_office_weekend = [5,50,50,50,50,40]
+table_transport_resident_weekend = [12,70,70,70,70,70]
+table_office_resident_weekend = [15,70,70,70,70,70]
 table_office_resident_transport_weekend = [20,60,60,60,60,60]
 
 #select combination of traffic area
@@ -553,7 +553,7 @@ if True:
 	trace0 = go.Scatter(
 	    x = time,
 	    y = sum_save_sc,
-	    name = 'sum_save_sc',
+	    name = 'shared_infrastructure',
 	    line = dict(
 	        color = ('rgb(205, 12, 24)'),
 	        width = 4)
@@ -561,7 +561,7 @@ if True:
 	trace1 = go.Scatter(
 	    x = time,
 	    y = sum_save_sc_weekend,
-	    name = 'sum_save_sc_weekend',
+	    name = 'shared_infrastructure_weekend',
 	    line = dict(
 	        color = ('rgb(22, 96, 167)'),
 	        width = 4,)
@@ -569,7 +569,7 @@ if True:
 	trace2 = go.Scatter(
 	    x = time,
 	    y = table_save_not_share_weekday,
-	    name = 'not_share_weekday',
+	    name = 'not_shared_infrastructure',
 	    line = dict(
 	        color = ('rgb(205, 12, 24)'),
 	        width = 4,
@@ -578,7 +578,7 @@ if True:
 	trace3 = go.Scatter(
 	    x = time,
 	    y = table_save_not_share_weekend,
-	    name = 'not_share_weekend',
+	    name = 'not_shared_infrastructure',
 	    line = dict(
 	        color = ('rgb(22, 96, 167)'),
 	        width = 4,
@@ -587,7 +587,7 @@ if True:
 	trace4 = go.Scatter(
 	    x = time,
 	    y = sum_save_sc,
-	    name = 'sum_save_sc',
+	    name = 'shared_infrastructure',
 	    line = dict(
 	        color = ('rgb(205, 12, 24)'),
 	        width = 4)
@@ -595,7 +595,7 @@ if True:
 	trace5 = go.Scatter(
 	    x = time,
 	    y = sum_save_sc_weekend,
-	    name = 'sum_save_sc_weekend',
+	    name = 'shared_infrastructure_weekend',
 	    line = dict(
 	        color = ('rgb(22, 96, 167)'),
 	        width = 4,)
@@ -604,7 +604,7 @@ if True:
 	data = [trace0, trace1, trace2, trace3, trace4, trace5]
 
 	# Edit the layout
-	layout = dict(title = 'Saving during weekdays and weekends',
+	layout = dict(title = 'Usage of small cells during weekdays and weekends',
 	              xaxis = dict(title = 'Time of day'),
 	              yaxis = dict(title = 'Save of Small Cells'),
 	              )
